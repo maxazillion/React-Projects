@@ -13,6 +13,30 @@
   }
 }
 
+.QueenBlue {
+  background-color: #33658a;
+}
+
+.Queen {
+  color: #33658a;
+}
+
+.DarkSkyBlue {
+  background-color: #86bbd8;
+}
+
+.Charcoal {
+  background-color: #2f4858;
+}
+
+.HoneyYellow {
+  background-color: #f6ae2d;
+}
+
+.SafetyOrange {
+  background-color: #f26419;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
