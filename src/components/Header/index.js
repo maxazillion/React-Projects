@@ -2,8 +2,8 @@ import { JasonImg } from "components";
 
 function Header() {
   return (
-    <div className="flex">
-      <div className="flex flex-col rounded-br-lg mr-2 mb-2 bg-white self-center p-2 min-w-max SafetyOrange shadow-lg">
+    <div className="flex pl-2">
+      <div className="flex flex-col rounded-b-lg mr-2 mb-2 bg-white self-center p-2 min-w-max SafetyOrange shadow-lg">
         <JasonImg />
 
         <div className="flex pt-2">

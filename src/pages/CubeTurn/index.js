@@ -1,7 +1,28 @@
+import { useState } from "react";
+import { Counter } from "../../components";
+
 function CubeTurn() {
+  const [size, setSize] = useState(4);
+
+  console.log(size);
   return (
-    <div className="fullScreen shadow-lg">
-      <h1>Cuboid</h1>
+    <div className="fullScreen shadow-lg min-h-screen flex flex-col p-2 QueenBlue m-2 rounded-xl">
+      <h1 className="self-center p-2 text-4xl">Cuboid</h1>
+      <Counter size={size} setSize={setSize} max={8} />
+      <div className="self-center m-2">
+        <button
+          data-action="decrement"
+          className=" bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none"
+        >
+          <span className="m-auto text-2xl font-thin">&larr;</span>
+        </button>
+        <button
+          data-action="decrement"
+          className=" bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer outline-none"
+        >
+          <span className="m-auto text-2xl font-thin">&rarr;</span>
+        </button>
+      </div>
     </div>
   );
 }
