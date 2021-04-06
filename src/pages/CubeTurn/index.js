@@ -25,7 +25,7 @@ function CubeTurn() {
 
   return (
     <div className="fullScreen shadow-lg flex flex-col p-2 QueenBlue m-2 rounded-xl">
-      <h1 className="self-center p-2 text-4xl">Cuboid</h1>
+      <h1 className="self-center p-2 text-4xl">Cube</h1>
       <Counter size={size} setSize={setSize} max={9} setCubes={setCubes} />
       <div className="self-center m-2">
         <button
