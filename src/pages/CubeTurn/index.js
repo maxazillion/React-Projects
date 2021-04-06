@@ -9,8 +9,6 @@ function CubeTurn() {
 
   useEffect(() => {
     setNumberedCubes(generateCubes(size));
-    console.log(generateCubes(size));
-    console.log(size);
   }, [size]);
 
   useEffect(() => {

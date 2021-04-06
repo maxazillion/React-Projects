@@ -9,11 +9,6 @@ function NavBar() {
       <nav>
         <ul className="flex gap-2 DarkSkyBlue rounded-r-lg pl-5 pr-5  max-w-full">
           <li>
-            <Link className={linkClass} to="./AboutMe">
-              About Me
-            </Link>
-          </li>
-          <li>
             <Link className={linkClass} to="./CubeTurn">
               Cube Turn
             </Link>
