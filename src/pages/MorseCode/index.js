@@ -4,23 +4,26 @@ import { Toggle } from "../../components";
 function MorseCode() {
   const [charUsed, setCharUsed] = useState(0);
   const [checked, setChecked] = useState(false);
-  const maxChar = "120";
+  const [outputText, setOutputText] = useState("");
+  const maxChar = "60";
 
   function handleType(event) {
     if (event.target.value.length > maxChar) {
       event.target.value = event.target.value.slice(0, -1);
     }
+
     setCharUsed(event.target.value.length);
+    setOutputText(event.target.value);
   }
 
   return (
     <div className="fullScreen shadow-lg flex flex-col p-2 QueenBlue m-2 rounded-xl">
       <h1 className="self-center text-4xl p-2">Morse Code</h1>
-      <Toggle right={"encode"} left={"decode"} status={setChecked} />
+      <Toggle right={"Encode"} left={"Decode"} checked={setChecked} />
       <div className="mb-3 pt-0 flex flex-col">
         <input
           type="text"
-          placeholder="Placeholder"
+          placeholder="Enter Text!"
           onKeyUp={handleType}
           className="px-3 py-3 placeholder-blueGray-300 text-blueGray-700 relative bg-white text-black rounded text-base border-0 shadow outline-none focus:outline-none focus:ring w-full"
         />
@@ -29,6 +32,10 @@ function MorseCode() {
             <h1>{charUsed}</h1>
             <h1>/{maxChar}</h1>
           </div>
+        </div>
+        <div className="px-3 py-3 placeholder-blueGray-300 text-blueGray-700 relative SafetyOrange rounded text-base border-0 shadow outline-none flex">
+          <h1 className="pr-2">Output: </h1>
+          <h1 className="self-center">{outputText}</h1>
         </div>
       </div>
     </div>

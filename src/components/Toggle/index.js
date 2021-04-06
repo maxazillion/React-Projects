@@ -6,7 +6,14 @@ function Toggle({ right, left, checked }) {
       <div className="ml-3 text-gray-700 font-medium px-2">{left}</div>
       <label htmlFor="toggleB" className="flex items-center cursor-pointer">
         <div className="relative">
-          <input type="checkbox" id="toggleB" className="sr-only" />
+          <input
+            type="checkbox"
+            id="toggleB"
+            onClick={(event) => {
+              checked((prev) => !prev);
+            }}
+            className="sr-only"
+          />
 
           <div className="block bg-gray-600 w-14 h-8 rounded-full"></div>
 
