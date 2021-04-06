@@ -8,7 +8,7 @@ function Counter({ size, setSize, max = 1000 }) {
   }
 
   function decrease(event) {
-    if (size > 4) {
+    if (size > 3) {
       setSize((prev) => prev - 1);
     }
   }

@@ -1,9 +1,9 @@
 function generateCubes(number) {
   const colors = [
-    "DarkSky w-8 h-8 bg-black border-2 border-black p-1 flex flex-col",
-    "Charcoal w-8 h-8 bg-black border-2 border-black p-1 flex flex-col",
-    "HoneyYellow w-8 h-8 bg-black border-2 border-black p-1 flex flex-col",
-    "SafetyOrange w-8 h-8 bg-black border-2 border-black p-1 flex flex-col",
+    "DarkSkyBlue w-8 h-8 bg-black p-1 flex flex-col",
+    "Charcoal w-8 h-8 bg-black  p-1 flex flex-col",
+    "HoneyYellow w-8 h-8 bg-black  p-1 flex flex-col",
+    "SafetyOrange w-8 h-8 bg-black p-1 flex flex-col",
   ];
 
   const ret = [];
@@ -59,4 +59,46 @@ function makeCubeBlock(cubes) {
   return makeCubeDiv(cubes);
 }
 
-export { generateCubes, makeCubeBlock };
+function turnLeft(cubes) {
+  console.log(cubes);
+  let size = Math.sqrt(cubes.length);
+  let ret = [];
+  let temp = [];
+
+  for (let i = 0; i < size; i++) {
+    ret.push([]);
+  }
+  for (let i = 0; i < cubes.length; i++) {
+    ret[i % size].push(cubes[i]);
+  }
+  for (let i = 0; i < size; i++) {
+    for (let x = 0; x < size; x++) {
+      ret.push(temp[i][x]);
+    }
+  }
+  return ret;
+}
+
+function turnRight(cubes) {
+  console.log(cubes);
+  let size = Math.sqrt(cubes.length);
+  let temp = [];
+  let ret = [];
+
+  for (let i = 0; i < size; i++) {
+    temp.push([]);
+  }
+
+  for (let i = cubes.length - 1; i > -1; i--) {
+    temp[i % size].push(cubes[i]);
+  }
+
+  for (let i = 0; i < size; i++) {
+    for (let x = 0; x < size; x++) {
+      ret.push(temp[i][x]);
+    }
+  }
+  return ret;
+}
+
+export { generateCubes, makeCubeBlock, turnLeft, turnRight };
