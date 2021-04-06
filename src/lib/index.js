@@ -30,7 +30,7 @@ function makeCubeDiv(cubes) {
   });
 
   startArr.forEach((element, index) => {
-    if (index % root === 3) {
+    if (index % root === root - 1) {
       between.push(element);
       ret.push(makeCubeCols(between, index));
       between = [];

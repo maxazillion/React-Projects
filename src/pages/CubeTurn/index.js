@@ -3,7 +3,7 @@ import { Counter } from "../../components";
 import { generateCubes, makeCubeBlock } from "../../lib";
 
 function CubeTurn() {
-  const [size, setSize] = useState(4);
+  const [size, setSize] = useState(5);
   const [cubes, setCubes] = useState(generateCubes(size));
   const [cubeCounter, setCubeCounter] = useState(0);
 
