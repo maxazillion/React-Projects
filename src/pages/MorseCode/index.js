@@ -18,7 +18,7 @@ function MorseCode() {
 
   return (
     <div className="fullScreen shadow-lg flex flex-col p-2 QueenBlue m-2 rounded-xl">
-      <h1 className="self-center text-4xl p-2">Morse Code</h1>
+      <h1 className="self-center text-4xl p-2">under construction</h1>
       <Toggle right={"Encode"} left={"Decode"} checked={setChecked} />
       <div className="mb-3 pt-0 flex flex-col">
         <input
