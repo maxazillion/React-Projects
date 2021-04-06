@@ -5,7 +5,7 @@ import { CubeTurn } from "./pages";
 
 function App() {
   return (
-    <div className="flex flex-col HoneyYellow text-white">
+    <div className="flex flex-col BGP min-h-screen text-white">
       <Header />
       <div>
         <Router>
