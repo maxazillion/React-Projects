@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import { Footer, Header, NavBar } from "./components";
-import { CubeTurn } from "./pages";
+import { CubeTurn, MorseCode } from "./pages";
 
 function App() {
   return (
@@ -13,6 +13,11 @@ function App() {
           <Switch>
             <Route path="/CubeTurn">
               <CubeTurn />
+            </Route>
+          </Switch>
+          <Switch>
+            <Route path="/MorseCode">
+              <MorseCode />
             </Route>
           </Switch>
         </Router>

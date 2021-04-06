@@ -5,12 +5,17 @@ const linkClass =
 
 function NavBar() {
   return (
-    <div className="flex shadow-lg">
+    <div className="flex">
       <nav>
-        <ul className="flex gap-2 DarkSkyBlue rounded-r-lg pl-5 pr-5  max-w-full">
+        <ul className="flex gap-2 DarkSkyBlue rounded-r-lg pl-5 pr-5  max-w-full shadow-lg">
           <li>
             <Link className={linkClass} to="./CubeTurn">
               Cube Turn
+            </Link>
+          </li>
+          <li>
+            <Link className={linkClass} to="./MorseCode">
+              Morse Code
             </Link>
           </li>
         </ul>
