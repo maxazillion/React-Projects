@@ -5,12 +5,16 @@ import { generateCubes, makeCubeBlock } from "../../lib";
 function CubeTurn() {
   const [size, setSize] = useState(5);
   const [cubes, setCubes] = useState(generateCubes(size));
-  const [cubeCounter, setCubeCounter] = useState(0);
+  const [numberedCubes, setNumberedCubes] = useState(generateCubes(size));
 
   useEffect(() => {
-    setCubes(generateCubes(size));
+    setNumberedCubes(generateCubes(size));
     console.log(size);
   }, [size]);
+
+  useEffect(() => {
+    setCubes(numberedCubes);
+  }, [numberedCubes]);
 
   return (
     <div className="fullScreen shadow-lg min-h-screen flex flex-col p-2 QueenBlue m-2 rounded-xl">
