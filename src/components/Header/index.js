@@ -35,7 +35,7 @@ function Header() {
       </div>
       <div className="self-center min-w-full rounded-l-lg QueenBlue shadow-lg">
         <h1 className="text-4xl p-2">Jason Rodgers</h1>
-        <h1 className="p-2">A Simple Page To Showcase My Projects</h1>
+        <h1 className="p-2">A Page To Showcase My Projects</h1>
       </div>
     </div>
   );
