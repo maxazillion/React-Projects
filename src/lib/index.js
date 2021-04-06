@@ -59,17 +59,16 @@ function makeCubeBlock(cubes) {
   return makeCubeDiv(cubes);
 }
 
-function turnLeft(cubes) {
-  console.log(cubes);
+function flipCube(cubes) {
   let size = Math.sqrt(cubes.length);
   let ret = [];
   let temp = [];
 
   for (let i = 0; i < size; i++) {
-    ret.push([]);
+    temp.push([]);
   }
   for (let i = 0; i < cubes.length; i++) {
-    ret[i % size].push(cubes[i]);
+    temp[i % size].push(cubes[i]);
   }
   for (let i = 0; i < size; i++) {
     for (let x = 0; x < size; x++) {
@@ -101,4 +100,4 @@ function turnRight(cubes) {
   return ret;
 }
 
-export { generateCubes, makeCubeBlock, turnLeft, turnRight };
+export { generateCubes, makeCubeBlock, flipCube, turnRight };
