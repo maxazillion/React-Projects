@@ -4,7 +4,7 @@ import { morseCode } from "../../lib";
 
 function MorseCode() {
   const [charUsed, setCharUsed] = useState(0);
-  const [checked, setChecked] = useState(false);
+  const [checked, setChecked] = useState(true);
   const [outputText, setOutputText] = useState("");
   const maxChar = "60";
 
@@ -23,8 +23,23 @@ function MorseCode() {
 
   return (
     <div className="fullScreen shadow-lg flex flex-col p-2 QueenBlue m-2 rounded-xl">
-      <h1 className="self-center text-4xl p-2">Morse Code</h1>
-      <Toggle right={"Encode"} left={"Decode"} checked={setChecked} />
+      {!checked ? (
+        <h1 className="self-center text-4xl p-2">
+          --/---/.-./..././-.-./---/-.././
+        </h1>
+      ) : (
+        <h1 className="self-center text-4xl p-2">Morse Code</h1>
+      )}
+      <Toggle right={"Decode"} left={"Encode"} checked={setChecked} />
+
+      {!checked ? (
+        <h1 className="self center ">
+          make sure to separate codes with a slash
+        </h1>
+      ) : (
+        <h1>Encode!</h1>
+      )}
+
       <div className="mb-3 pt-0 flex flex-col">
         <input
           type="text"
