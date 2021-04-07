@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Toggle } from "../../components";
+import { morseCode } from "../../lib";
 
 function MorseCode() {
   const [charUsed, setCharUsed] = useState(0);
@@ -13,12 +14,16 @@ function MorseCode() {
     }
 
     setCharUsed(event.target.value.length);
-    setOutputText(event.target.value);
+    if (checked === false) {
+      setOutputText(morseCode.decodeString(event.target.value));
+    } else {
+      setOutputText(morseCode.encodeString(event.target.value));
+    }
   }
 
   return (
     <div className="fullScreen shadow-lg flex flex-col p-2 QueenBlue m-2 rounded-xl">
-      <h1 className="self-center text-4xl p-2">under construction</h1>
+      <h1 className="self-center text-4xl p-2">Morse Code</h1>
       <Toggle right={"Encode"} left={"Decode"} checked={setChecked} />
       <div className="mb-3 pt-0 flex flex-col">
         <input

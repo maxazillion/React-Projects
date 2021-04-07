@@ -117,7 +117,7 @@ const morseCode = {
     M: "--",
     N: "-.",
     O: "---",
-    P: "",
+    P: ".--.",
     Q: "--.-",
     R: ".-.",
     S: "...",
@@ -138,6 +138,43 @@ const morseCode = {
     7: "--...",
     8: "---..",
     9: "----.",
+  },
+  encodeChar: function (char) {
+    return this.codes[char.toUpperCase()];
+  },
+  decodeChar: function (char, codes = this.codes) {
+    let ret = "";
+    Object.keys(codes).forEach(function (key) {
+      if (char === codes[key]) {
+        ret += key;
+      }
+    });
+    return ret;
+  },
+  decodeString: function (str) {
+    let ret = "";
+    let temp = "";
+    for (let i = 0; i < str.length; i++) {
+      if (str[i] === "/") {
+        ret += this.decodeChar(temp);
+        temp = "";
+      } else {
+        temp += str[i];
+      }
+    }
+    return ret;
+  },
+  encodeString: function (str) {
+    let ret = "";
+    for (let i = 0; i < str.length; i++) {
+      if (str[i] !== " ") {
+        ret += this.encodeChar(str[i]);
+        ret += "/";
+      } else {
+        ret += " ";
+      }
+    }
+    return ret;
   },
 };
 
