@@ -38,7 +38,7 @@ function Header() {
       <div className="self-center min-w-full rounded-l-lg QueenBlue shadow-lg">
         <h1 className="text-4xl p-2 pb-0">Jason Rodgers</h1>
         <a
-          href="https://drive.google.com/file/d/1SKXCqwO9hxyMfc80up32z3CDv4uFHEIV/view?usp=sharing"
+          href="https://drive.google.com/file/d/1J1DG8nM2sFKhBN5GhmC7FTxpdHLFjiDZ/view?usp=sharing"
           target="blank"
         >
           <h1 className="p-3 pt-0">Project Showcase</h1>
